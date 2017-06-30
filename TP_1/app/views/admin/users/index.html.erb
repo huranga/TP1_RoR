@@ -1,0 +1,13 @@
+<ul>
+<% @users.each do |user| %>
+	<li> 
+		<%= link_to [:admin, user] do %>
+			<%= user.firstname %> <%= user.lastname %>, <%= user.age %>ans
+		<% end %>
+		<%= link_to "Modifier", [:edit, :admin, user] %>
+		<%= link_to "Supprimer", [:admin, user], method: :delete %>
+	</li>
+<% end %>
+</ul>
+
+<%= link_to "Nouvel Utilisateur", [:new, :admin, :user] %>

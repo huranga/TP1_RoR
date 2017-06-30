@@ -1,0 +1,10 @@
+<%= form_for @users, url: [:admin, @users] do |f| %>
+
+	<%= f.text_field :firstname %>
+	<%= f.text_field :lastname %>
+	<%= f.number_field :age %>
+
+	<%= f.file_field :image %>
+
+	<%= f.submit %>
+<% end %>

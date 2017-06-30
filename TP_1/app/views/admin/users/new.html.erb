@@ -1,0 +1,12 @@
+<%= form_for @users, url: [:admin, @users] do |f| %>
+
+	<%= f.text_field :firstname %>
+	<%= @users.errors[:firstname] %>
+	<%= f.text_field :lastname %>
+	<%= @users.errors[:lastname] %>
+	<%= f.number_field :age %>
+
+	<%= f.file_field :image %>
+
+	<%= f.submit %>
+<% end %>
